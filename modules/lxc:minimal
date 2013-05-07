@@ -1,0 +1,9 @@
+#!/bin/sh
+
+apt-get install lxc
+
+mkdir /cgroup
+if ! grep cgroup /etc/fstab
+then 
+  echo cgroup  /cgroup  cgroup  defaults  0  0 >> /etc/fstab
+fi
