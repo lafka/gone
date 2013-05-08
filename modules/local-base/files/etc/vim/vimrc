@@ -1,0 +1,81 @@
+" Keep buffers
+set hidden
+
+" Set line numbers
+set number
+
+" tab size
+set tabstop=4
+set shiftwidth=4
+
+set copyindent
+
+" Fix case-insensitive search unless you have a capital letter
+set ignorecase
+set smartcase
+
+" And highlighting, also when they are typed
+set hlsearch
+set incsearch
+
+" When we scroll, make it a few lines more so we know what we do
+set scrolloff=3
+
+set backspace=indent,eol,start
+
+" highlight matching brackets and so on
+set showmatch 
+
+filetype on
+filetype plugin on
+
+syntax on
+
+set mouse=a
+
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>70v.\+', -1)
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+"" Trailing whitespace
+" Show trailing whitespace and spaces before a tab:
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+" Show tabs that are not at the start of a line:
+match ExtraWhitespace /[^\t]\zs\t\+/
+" Show spaces used for indenting (so you use only tabs for indenting).
+
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+set textwidth=70
+" Disable text wrapping
+set nowrap
+set formatoptions-=at
+
+" Add crosshair
+set cuc
+set cul
+
+set colorcolumn=-1
+
+hi! link CursorColumn CursorLine
+hi CursorLine gui=NONE guibg=0 ctermbg=0
+hi ColorColumn guibg=NONE ctermbg=0
+
+" Buffer shortcuts
+map <silent> <C-Tab> :bnext<CR>
+map <silent> <C-S-Tab> :bprevious<CR>
+
+map <silent> <C-Up> :wincmd k<CR>
+map <silent> <C-Down> :wincmd j<CR>
+map <silent> <C-Left> :wincmd h<CR>
+map <silent> <C-Right> :wincmd l<CR>
+
+nmap  <silent> <C-Up> :wincmd k<CR>
+nmap  <silent> <C-Down> :wincmd j<CR>
+nmap  <silent> <C-Left> :wincmd h<CR>
+nmap  <silent> <C-Right> :wincmd l<CR>
+
+" Spell checker
+au BufWinEnter *.* setlocal spell spelllang=en_gb
+
+" Restore to previous position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif

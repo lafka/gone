@@ -10,7 +10,7 @@
 # $methods     : List of checksum methods that can be called
 
 GPG_KEYS="107B264D CE49888C 845B49F2"
-MODULES=""
+MODULES="local-base"
 SYNC_AGENTS="sync_default sync_modules sync_host"
 
 #
@@ -25,7 +25,7 @@ sync_host() {
 
       if [ -f $hosttarget/modules ]; then
          _OLD_MODULES=$MODULES
-         MODULES=$(cat $hosttarget/modules)
+         MODULES="$MODULES $(cat $hosttarget/modules)"
          log 3 "syncing modules for host $fqdn: $MODULES"
          sync_modules
          MODULES=$_OLD_MODULES
