@@ -25,7 +25,7 @@ foreach() {
 # execute module script and place files where they should be
 dosync()  {
    doscript $1
-   match_copy $1 $check_methods
+   match_copy $1 "$methods"
 }
 
 sync_modules() {
@@ -35,7 +35,7 @@ sync_modules() {
 }
 
 sync_default() {
-   match_copy . $check_methods
+   match_copy . $methods
 }
 
 # Levels:
@@ -47,7 +47,7 @@ sync_default() {
 log() {
    level=$1
    shift
-   if [ $verbosity  -ge $level ] || [[ "yes" == $DEBUG ]]; then
+   if [ $verbosity  -ge $level ] || [ "yes" = "$DEBUG" ]; then
       case "$level" in
          0) echo -n "[fatal] " ;;
          1) echo -n "  [err] " ;;
@@ -60,3 +60,7 @@ log() {
    fi
 }
 
+
+hd() {
+	echo $1
+}
