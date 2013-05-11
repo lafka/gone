@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+pkgs="curl build-essentials libncurses5-dev openssl libssl-dev"
+
+apt-get install $pkgs
+
+if [ -d /opt/kerl ]; then
+	git clone git://github.com/spawngrid/kerl.git /opt
+	ln -s /opt/kerl/kerl /usr/local/bin/kerl
+fi
+
+# Create a default erlang install
+if [ -d /opt/erlang ]; then
+	rel=$(kerl update releases | tail -1 | awk '{print $NF}')
+	name=$(echo $rel | tr '[A-Z]' '[a-z]')
+
+	kerl build $rel $name
+	kerl install $name /opt/erlang
+
+	chgrp -R users /opt/erlang/lib
+
+	echo '. /opt/erlang/activate' >> ~/.profile
+fi
