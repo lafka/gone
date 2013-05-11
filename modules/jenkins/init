@@ -1,10 +1,11 @@
 #!/bin/sh
 
 aptsource="/etc/apt/sources.list.d/jenkins.list"
+pkgs="jenkins"
 
 if [ ! -e $aptsource ]; then
 	echo "deb http://pkg.jenkins-ci.org/debian binary/" > $aptsource
 	apt-get update
 fi
 
-apt-get install jenkins
+apt-get install $pkgs

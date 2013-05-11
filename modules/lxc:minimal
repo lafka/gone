@@ -1,9 +1,11 @@
 #!/bin/sh
 
-apt-get install lxc
+pkgs="lxc"
+
+apt-get install $pkgs
 
 mkdir /cgroup
 if ! grep cgroup /etc/fstab
-then 
+then
   echo cgroup  /cgroup  cgroup  defaults  0  0 >> /etc/fstab
 fi
