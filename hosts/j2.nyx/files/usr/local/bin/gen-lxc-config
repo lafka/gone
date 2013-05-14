@@ -2,9 +2,6 @@
 TEMPLATE=$(cat <<EOF
 lxc.utsname = {{name}}\n
 \n
-lxc.rootfs = /var/virt/guest/{{name}}\n
-lxc.mount.entry=proc /var/virt/ji/proc proc nodev,noexec,nosuid 0 0\n
-\n
 lxc.network.type = veth\n
 lxc.network.flags = up\n
 lxc.network.link = br0\n
