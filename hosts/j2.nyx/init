@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pkgs="inotify-tools"
+
+apt-get install $pkgs
