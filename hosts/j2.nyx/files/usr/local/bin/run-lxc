@@ -1,0 +1,3 @@
+#!/bin/sh
+addr=$(( $(brctl show $BRIDGE | wc -l) + 198 ))
+lxc-execute -f /etc/lxc/lxc-${addr}.conf -n lxc-${addr} route add default gw 172.17.1.1 && $@
