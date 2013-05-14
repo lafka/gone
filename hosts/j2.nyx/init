@@ -1,5 +1,8 @@
 #!/bin/sh
 
-pkgs="inotify-tools bridge-utils"
+pkgs="inotify-tools bridge-utils sudo"
+
+groupadd -f lxc
+usermod -G lxc -a jenkins
 
 apt-get install $pkgs
