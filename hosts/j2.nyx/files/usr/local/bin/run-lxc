@@ -2,5 +2,5 @@
 set -x
 
 addr=$(( $(brctl show $BRIDGE | wc -l) + 199 ))
-cmd="route add default gw 172.17.1.1; su $USER -c '$@'; echo \$? > /tmp/lxc-run-$addr"
-sudo lxc-start -f /etc/lxc/lxc-${addr}.conf -n lxc-${addr} -- /bin/sh -cl "$cmd"
+cmd="route add default gw 172.17.1.1; su $USER -lc '$@'; echo \$? > /tmp/lxc-run-$addr"
+sudo lxc-start -f /etc/lxc/lxc-${addr}.conf -n lxc-${addr} -- /bin/sh -c "$cmd"
