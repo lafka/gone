@@ -1,0 +1,65 @@
+127.0.0.1	localhost
+127.0.1.1	j2.nyx j2
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+172.17.1.1 nyx
+
+172.17.1.200 lxc-200.j2.nyx lxc-200
+172.17.1.201 lxc-201.j2.nyx lxc-201
+172.17.1.202 lxc-202.j2.nyx lxc-202
+172.17.1.203 lxc-203.j2.nyx lxc-203
+172.17.1.204 lxc-204.j2.nyx lxc-204
+172.17.1.205 lxc-205.j2.nyx lxc-205
+172.17.1.206 lxc-206.j2.nyx lxc-206
+172.17.1.207 lxc-207.j2.nyx lxc-207
+172.17.1.208 lxc-208.j2.nyx lxc-208
+172.17.1.209 lxc-209.j2.nyx lxc-209
+172.17.1.210 lxc-210.j2.nyx lxc-210
+172.17.1.211 lxc-211.j2.nyx lxc-211
+172.17.1.212 lxc-212.j2.nyx lxc-212
+172.17.1.213 lxc-213.j2.nyx lxc-213
+172.17.1.214 lxc-214.j2.nyx lxc-214
+172.17.1.215 lxc-215.j2.nyx lxc-215
+172.17.1.216 lxc-216.j2.nyx lxc-216
+172.17.1.217 lxc-217.j2.nyx lxc-217
+172.17.1.218 lxc-218.j2.nyx lxc-218
+172.17.1.219 lxc-219.j2.nyx lxc-219
+172.17.1.220 lxc-220.j2.nyx lxc-220
+172.17.1.221 lxc-221.j2.nyx lxc-221
+172.17.1.222 lxc-222.j2.nyx lxc-222
+172.17.1.223 lxc-223.j2.nyx lxc-223
+172.17.1.224 lxc-224.j2.nyx lxc-224
+172.17.1.225 lxc-225.j2.nyx lxc-225
+172.17.1.226 lxc-226.j2.nyx lxc-226
+172.17.1.227 lxc-227.j2.nyx lxc-227
+172.17.1.228 lxc-228.j2.nyx lxc-228
+172.17.1.229 lxc-229.j2.nyx lxc-229
+172.17.1.230 lxc-230.j2.nyx lxc-230
+172.17.1.231 lxc-231.j2.nyx lxc-231
+172.17.1.232 lxc-232.j2.nyx lxc-232
+172.17.1.233 lxc-233.j2.nyx lxc-233
+172.17.1.234 lxc-234.j2.nyx lxc-234
+172.17.1.235 lxc-235.j2.nyx lxc-235
+172.17.1.236 lxc-236.j2.nyx lxc-236
+172.17.1.237 lxc-237.j2.nyx lxc-237
+172.17.1.238 lxc-238.j2.nyx lxc-238
+172.17.1.239 lxc-239.j2.nyx lxc-239
+172.17.1.240 lxc-240.j2.nyx lxc-240
+172.17.1.241 lxc-241.j2.nyx lxc-241
+172.17.1.242 lxc-242.j2.nyx lxc-242
+172.17.1.243 lxc-243.j2.nyx lxc-243
+172.17.1.244 lxc-244.j2.nyx lxc-244
+172.17.1.245 lxc-245.j2.nyx lxc-245
+172.17.1.246 lxc-246.j2.nyx lxc-246
+172.17.1.247 lxc-247.j2.nyx lxc-247
+172.17.1.248 lxc-248.j2.nyx lxc-248
+172.17.1.249 lxc-249.j2.nyx lxc-249
+172.17.1.250 lxc-250.j2.nyx lxc-250
+172.17.1.251 lxc-251.j2.nyx lxc-251
+172.17.1.252 lxc-252.j2.nyx lxc-252
+172.17.1.253 lxc-253.j2.nyx lxc-253
+172.17.1.254 lxc-254.j2.nyx lxc-254
